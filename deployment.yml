@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iot-wil
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: iot-wil
+  template:
+    metadata:
+      labels:
+        app: iot-wil
+    spec:
+      containers:
+      - image: wil42/playground:v1
+        name: wil-playground
+        ports:
+        - containerPort: 8888
+          name: http-wil-playground-svc
