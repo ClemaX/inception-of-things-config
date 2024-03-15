@@ -5,6 +5,6 @@ metadata:
 spec:
   ports:
   - port: 80
-    targetPort: http-wil-playground-svc
+    targetPort: http-svc
   selector:
     app: iot-wil

@@ -18,4 +18,4 @@ spec:
         name: wil-playground
         ports:
         - containerPort: 8888
-          name: http-wil-playground-svc
+          name: http-svc
